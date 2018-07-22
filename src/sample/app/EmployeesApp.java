@@ -25,14 +25,10 @@ public class EmployeesApp {
         this.service = service;
     }
 
-    public void start() {
+    public Couple findLongestWorkingCouple() {
         this.readInput();
-        this.executeBusinessLogic();
-    }
 
-    private void executeBusinessLogic() {
-        Couple couple = this.service.findLongestWorkingCoupleIds(this.data);
-        System.out.println(couple);
+        return this.service.findLongestWorkingCoupleIds(this.data);
     }
 
     private void readInput() {
