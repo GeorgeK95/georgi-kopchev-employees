@@ -17,7 +17,6 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import sample.app.EmployeesApp;
 import sample.model.Couple;
-import sample.model.Person;
 import sample.service.WorkProcessService;
 import sample.service.api.IWorkProcessService;
 
@@ -37,8 +36,9 @@ public class Main extends Application {
     public static final String EMPLOYEE_ID_2 = "Employee ID #2";
     public static final String SECOND_EMPLOYEE_ID = "secondEmployeeId";
     public static final String PROJECT_ID_BIG = "Project ID";
+    public static final String DAYS_WORKED_BIG = "Days Worked";
     public static final String PROJECT_ID_SMALL = "projectId";
-    public static final String DAYS_WORKED = "daysWorked";
+    public static final String DAYS_WORKED_SMALL = "daysWorked";
     public static final String SELECT_FILE = "Select File";
     public static final int WIDTH = 700;
     public static final int HEIGHT = 700;
@@ -80,20 +80,16 @@ public class Main extends Application {
         projectIdCol.setMinWidth(MIN_WIDTH_2);
         projectIdCol.setCellValueFactory(new PropertyValueFactory<Couple, String>(PROJECT_ID_SMALL));
 
-        TableColumn daysWorked = new TableColumn(DAYS_WORKED);
-        projectIdCol.setMinWidth(MIN_WIDTH_2);
-        projectIdCol.setCellValueFactory(new PropertyValueFactory<Couple, String>(DAYS_WORKED));
+        TableColumn daysWorkedCol = new TableColumn(DAYS_WORKED_BIG);
+        daysWorkedCol.setMinWidth(MIN_WIDTH_2);
+        daysWorkedCol.setCellValueFactory(new PropertyValueFactory<Couple, String>(DAYS_WORKED_SMALL));
 
-        table.getColumns().addAll(firstEmployeeIdCol, secondEmployeeIdCol, projectIdCol, daysWorked);
+        table.getColumns().addAll(firstEmployeeIdCol, secondEmployeeIdCol, projectIdCol, daysWorkedCol);
 
         Button button = new Button(SELECT_FILE);
         button.setOnAction(e -> {
             File file = fileChooser.showOpenDialog(primaryStage);
             if (file != null) {
-                String pesho1 = "Pesho";
-                String pesho2 = "Peshov";
-                String email = "pesho@abv.bg";
-
                 ObservableList<Couple> data = FXCollections.observableArrayList(employeesApp.findLongestWorkingCouple());
 
                 table.setItems(data);
