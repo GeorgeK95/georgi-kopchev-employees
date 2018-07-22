@@ -12,6 +12,7 @@ public final class Constants {
     public static final String YYYY_MM_DD_DATE_FORMAT = "yyyy-mm-dd";
     public static final int ZERO = 0;
     public static final int ONE = 1;
+    public static final String NULL = "NULL";
 
     public static final String NO_DATA_PROVIDED_MESSAGE = "No solution found, " +
             "please make sure provided employees data is not an empty file or there is at least one project in which contains" +
