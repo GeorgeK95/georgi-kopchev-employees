@@ -75,10 +75,6 @@ public class Main extends Application {
         fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter(TEXT_FILES, TXT));
     }
 
-    private void setVbox(TableView label, Button button) {
-
-    }
-
     private void setTableColumns() {
         this.firstEmployeeIdCol = new TableColumn(EMPLOYEE_ID_1);
         firstEmployeeIdCol.setMinWidth(MIN_WIDTH);

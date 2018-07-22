@@ -2,43 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/georgi-kopchev-employees/sample/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/georgi-kopchev-employees/sample/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/georgi-kopchev-employees/sample/app/EmployeesApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/georgi-kopchev-employees/sample/exception/SolutionNotFoundException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/georgi-kopchev-employees/sample/factory/WorkProcessFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/georgi-kopchev-employees/sample/model/Couple.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/georgi-kopchev-employees/sample/model/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/georgi-kopchev-employees/sample/model/WorkProcess.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/georgi-kopchev-employees/sample/sample.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/georgi-kopchev-employees/sample/service/WorkProcessService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/georgi-kopchev-employees/sample/service/api/IWorkProcessService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/georgi-kopchev-employees/sample/util/Constants.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/georgi-kopchev-employees/sample/util/Reader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/app/EmployeesApp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/app/EmployeesApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/EmployeesApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/exception/SolutionNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/exception/SolutionNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/exception/SolutionNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/factory/WorkProcessFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/factory/WorkProcessFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/factory/WorkProcessFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/model/Couple.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/model/Couple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/Couple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/model/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/model/WorkProcess.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/model/WorkProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/WorkProcess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/service/WorkProcessService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/service/WorkProcessService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/service/WorkProcessService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/service/api/IWorkProcessService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/service/api/IWorkProcessService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/service/api/IWorkProcessService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/util/Constants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/util/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/util/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/util/Reader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/util/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/util/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Main.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -95,7 +59,20 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-352">
+              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -130,11 +107,12 @@
         <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
         <option value="$PROJECT_DIR$/data/employees.txt" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/app/EmployeesApp.java" />
         <option value="$PROJECT_DIR$/src/engine/EmployeesApp.java" />
         <option value="$PROJECT_DIR$/src/core/EmployeesApp.java" />
         <option value="$PROJECT_DIR$/src/app/core/EmployeesApp.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/app/Main.java" />
       </list>
     </option>
   </component>
@@ -173,11 +151,6 @@
             <path>
               <item name="georgi-kopchev-employees" type="b2602c69:ProjectViewProjectNode" />
               <item name="georgi-kopchev-employees" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="georgi-kopchev-employees" type="b2602c69:ProjectViewProjectNode" />
-              <item name="georgi-kopchev-employees" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -210,6 +183,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\GitHub\georgi-kopchev-employees\src\app" />
       <recent name="C:\GitHub\georgi-kopchev-employees\src" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -347,15 +321,16 @@
       <option name="presentableId" value="Default" />
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
-      <workItem from="1532281772951" duration="7266000" />
+      <workItem from="1532281772951" duration="7510000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8568000" />
+    <option name="totallyTimeSpent" value="8812000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -366,12 +341,12 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3496063" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3496063" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.25036603" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.25036603" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32913387" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -447,19 +422,17 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/app/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3507#3508#0" expanded="true" />
-            <element signature="e#3535#3536#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample.fxml">
+    <entry file="file://$PROJECT_DIR$/src/app/sample.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -467,7 +440,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/app/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
@@ -536,7 +509,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample.fxml">
+    <entry file="file://$PROJECT_DIR$/src/app/sample.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -554,7 +527,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/app/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
@@ -593,22 +566,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3507#3508#0" expanded="true" />
-            <element signature="e#3535#3536#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/model/Person.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-352">
+          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
