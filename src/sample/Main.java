@@ -12,7 +12,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import sample.app.EmployeesApp;
@@ -22,69 +21,32 @@ import sample.service.api.IWorkProcessService;
 
 import java.io.File;
 
-import static sample.util.Constants.ZERO;
+import static sample.util.Constants.*;
 
 public class Main extends Application {
 
-    public static final String TEXT_FILES = "Text Files";
-    public static final String TXT = "*.txt";
-    public static final String EMPLOYEES_APP_NAME = "Employees App";
-    public static final String ADDRESS_BOOK = "Address Book";
-    public static final Font ARIAL = new Font("Arial", 20);
-    public static final String EMPLOYEE_ID_1 = "Employee ID #1";
-    public static final String FIRST_EMPLOYEE_ID = "firstEmployeeId";
-    public static final String EMPLOYEE_ID_2 = "Employee ID #2";
-    public static final String SECOND_EMPLOYEE_ID = "secondEmployeeId";
-    public static final String PROJECT_ID_BIG = "Project ID";
-    public static final String DAYS_WORKED_BIG = "Days Worked";
-    public static final String PROJECT_ID_SMALL = "projectId";
-    public static final String DAYS_WORKED_SMALL = "daysWorked";
-    public static final String SELECT_FILE = "Select File";
-    public static final int WIDTH = 700;
-    public static final int HEIGHT = 700;
-    public static final int MIN_WIDTH = 100;
-    public static final int MIN_WIDTH_2 = 200;
-    public static final int SPACING = 5;
-    public static final int TOP = 10;
-    public static final int LEFT = 10;
-    private TableView table;
     private IWorkProcessService service;
 
     private EmployeesApp employeesApp;
 
+    private TableColumn firstEmployeeIdCol;
+    private TableColumn secondEmployeeIdCol;
+    private TableColumn projectIdCol;
+    private TableColumn daysWorkedCol;
+    private TableView table;
+    private VBox vbox;
+    private FileChooser fileChooser;
+
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
         this.initializeDependencies();
+        this.configurePrimaryStage(primaryStage);
+        this.setTableColumns();
 
-        FileChooser fileChooser = new FileChooser();
-        fileChooser.getExtensionFilters().addAll(
-                new FileChooser.ExtensionFilter(TEXT_FILES, TXT)
-        );
-
-        primaryStage.setTitle(EMPLOYEES_APP_NAME);
-        primaryStage.setWidth(WIDTH);
-        primaryStage.setHeight(HEIGHT);
+        this.setFileChooser();
 
         final Label label = new Label(ADDRESS_BOOK);
         label.setFont(ARIAL);
-
-        TableColumn firstEmployeeIdCol = new TableColumn(EMPLOYEE_ID_1);
-        firstEmployeeIdCol.setMinWidth(MIN_WIDTH);
-        firstEmployeeIdCol.setCellValueFactory(new PropertyValueFactory<Couple, String>(FIRST_EMPLOYEE_ID));
-
-        TableColumn secondEmployeeIdCol = new TableColumn(EMPLOYEE_ID_2);
-        secondEmployeeIdCol.setMinWidth(MIN_WIDTH);
-        secondEmployeeIdCol.setCellValueFactory(new PropertyValueFactory<Couple, String>(SECOND_EMPLOYEE_ID));
-
-        TableColumn projectIdCol = new TableColumn(PROJECT_ID_BIG);
-        projectIdCol.setMinWidth(MIN_WIDTH_2);
-        projectIdCol.setCellValueFactory(new PropertyValueFactory<Couple, String>(PROJECT_ID_SMALL));
-
-        TableColumn daysWorkedCol = new TableColumn(DAYS_WORKED_BIG);
-        daysWorkedCol.setMinWidth(MIN_WIDTH_2);
-        daysWorkedCol.setCellValueFactory(new PropertyValueFactory<Couple, String>(DAYS_WORKED_SMALL));
-
-        table.getColumns().addAll(firstEmployeeIdCol, secondEmployeeIdCol, projectIdCol, daysWorkedCol);
 
         Button button = new Button(SELECT_FILE);
         button.setOnAction(e -> {
@@ -96,10 +58,7 @@ public class Main extends Application {
             }
         });
 
-        final VBox vbox = new VBox(button);
-        vbox.setSpacing(SPACING);
-        vbox.setPadding(new Insets(TOP, ZERO, ZERO, LEFT));
-        vbox.getChildren().addAll(label, table);
+        this.setVbox(table, button);
 
         Scene scene = new Scene(new Group());
 
@@ -109,10 +68,48 @@ public class Main extends Application {
         primaryStage.show();
     }
 
+    private void setFileChooser() {
+        this.fileChooser = new FileChooser();
+        fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter(TEXT_FILES, TXT));
+    }
+
+    private void setVbox(TableView label, Button button) {
+        this.vbox = new VBox(button);
+        vbox.setSpacing(SPACING);
+        vbox.setPadding(new Insets(TOP, ZERO, ZERO, LEFT));
+        vbox.getChildren().addAll(label, this.table);
+    }
+
+    private void setTableColumns() {
+        this.firstEmployeeIdCol = new TableColumn(EMPLOYEE_ID_1);
+        firstEmployeeIdCol.setMinWidth(MIN_WIDTH);
+        firstEmployeeIdCol.setCellValueFactory(new PropertyValueFactory<Couple, String>(FIRST_EMPLOYEE_ID));
+
+        this.secondEmployeeIdCol = new TableColumn(EMPLOYEE_ID_2);
+        secondEmployeeIdCol.setMinWidth(MIN_WIDTH);
+        secondEmployeeIdCol.setCellValueFactory(new PropertyValueFactory<Couple, String>(SECOND_EMPLOYEE_ID));
+
+        this.projectIdCol = new TableColumn(PROJECT_ID_BIG);
+        projectIdCol.setMinWidth(MIN_WIDTH_2);
+        projectIdCol.setCellValueFactory(new PropertyValueFactory<Couple, String>(PROJECT_ID_SMALL));
+
+        this.daysWorkedCol = new TableColumn(DAYS_WORKED_BIG);
+        daysWorkedCol.setMinWidth(MIN_WIDTH_2);
+        daysWorkedCol.setCellValueFactory(new PropertyValueFactory<Couple, String>(DAYS_WORKED_SMALL));
+
+        this.table = new TableView();
+        table.getColumns().addAll(firstEmployeeIdCol, secondEmployeeIdCol, projectIdCol, daysWorkedCol);
+    }
+
+    private void configurePrimaryStage(Stage primaryStage) {
+        primaryStage.setTitle(EMPLOYEES_APP_NAME);
+        primaryStage.setWidth(WIDTH);
+        primaryStage.setHeight(HEIGHT);
+    }
+
     private void initializeDependencies() {
         this.service = new WorkProcessService();
         this.employeesApp = new EmployeesApp(service);
-        table = new TableView();
     }
 
 
