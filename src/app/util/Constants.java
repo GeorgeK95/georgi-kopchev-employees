@@ -4,6 +4,7 @@ import javafx.scene.text.Font;
 
 public final class Constants {
 
+    public static final String DOT = ".";
     public static final String SEED_FILE_PATH = System.getProperty("user.dir") + "\\data\\employees.txt";
     public static final String VERTICAL_BAR = "|";
     public static final String VERTICAL_BAR_SEPARATOR = "\\|";

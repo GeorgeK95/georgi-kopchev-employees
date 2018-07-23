@@ -20,6 +20,7 @@ import app.service.WorkProcessService;
 import app.service.api.IWorkProcessService;
 
 import java.io.File;
+import java.nio.file.Paths;
 
 import static app.util.Constants.*;
 
@@ -72,7 +73,9 @@ public class Main extends Application {
 
     private void setFileChooser() {
         this.fileChooser = new FileChooser();
-        fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter(TEXT_FILES, TXT));
+        String currentPath = Paths.get(DOT).toAbsolutePath().normalize().toString();
+        this.fileChooser.setInitialDirectory(new File(currentPath));
+        this.fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter(TEXT_FILES, TXT));
     }
 
     private void setTableColumns() {
