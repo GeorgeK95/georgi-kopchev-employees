@@ -10,7 +10,7 @@ import app.util.Reader;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static app.util.Constants.COMMA_SPACE_SEPARATOR;
+import static app.util.Constants.SPACE_SEPARATOR;
 import static app.util.Constants.VERTICAL_BAR_SEPARATOR;
 
 public class EmployeesApp {
@@ -34,7 +34,7 @@ public class EmployeesApp {
         String[] lines = Reader.readFile(Constants.SEED_FILE_PATH).split(VERTICAL_BAR_SEPARATOR);
 
         for (String line : Arrays.stream(lines).filter(e -> !e.isEmpty()).collect(Collectors.toSet())) {
-            String[] inputData = line.split(COMMA_SPACE_SEPARATOR);
+            String[] inputData = line.split(SPACE_SEPARATOR);
 
             WorkProcess workProcess = WorkProcessFactory.generate(inputData);
 
